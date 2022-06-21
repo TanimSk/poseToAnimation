@@ -6,7 +6,7 @@
     python main.py
 
 **what it does -**  
-tracks pose and generates a stick figure frame by frame.
+tracks pose and generates stick figure frame by frame.
 
 **how does it work -**  
 tracks with 33 pose landmarks using [ML model](https://github.com/google-research/google-research/tree/master/ghum) and returns the coordinates. Then generates a frame by connecting and manipulating the coords.
