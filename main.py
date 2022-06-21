@@ -3,6 +3,8 @@ import mediapipe as mp
 from draw import Draw
 import math
 
+URL = ""
+HEAD_RADIUS = 52 # in px
 
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -52,7 +54,7 @@ class Vertices:
 
 
 
-cap = cv2.VideoCapture('https://assets.mixkit.co/videos/preview/mixkit-young-man-walking-listening-to-music-from-his-headphones-4855-large.mp4')
+cap = cv2.VideoCapture(URL)
 
 index = 0
 
@@ -143,7 +145,7 @@ with mp_pose.Pose(
 
             draw_img.draw_head(
                 (int(results.pose_landmarks.landmark[0].x * image_width), int(results.pose_landmarks.landmark[0].y * image_height)),
-                52
+                HEAD_RADIUS
             )
 
             img = draw_img.generate()
