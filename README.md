@@ -1,4 +1,7 @@
-**how to use -**
+**Demo Video -**
+https://www.youtube.com/watch?v=FMKiek_8b6s
+
+**How to use -**
 
     pip install opencv-python mediapipe
     git clone https://github.com/TanimSk/poseToAnimation
